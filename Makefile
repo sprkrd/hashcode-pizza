@@ -1,10 +1,10 @@
-TARGETS = generate-feasible-rectangles.x
+TARGETS = pizza
 
 CPPFLAGS=-Wall -Wextra -pedantic --std=c++11 -O3 -pthread
 
 all: $(TARGETS)
 
-$(TARGETS): %.x: %.cpp
+$(TARGETS): %: %.cpp
 	g++ $(CPPFLAGS) $< -o $@
 	
 clean:
